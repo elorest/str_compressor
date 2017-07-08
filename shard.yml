@@ -1,0 +1,13 @@
+name: str_compressor
+version: 0.1.0
+
+authors:
+  - Isaac Sloan <isaac@isaacsloan.com>
+
+targets:
+  str_compressor:
+    main: src/str_compressor.cr
+
+crystal: 0.22.0
+
+license: MIT
