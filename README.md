@@ -1,18 +1,30 @@
-# str_compressor
+# Crystal String Compressor
 
-TODO: Write a description here
+Makes it easy to compress/decompress and string for sending over a network and multiple other uses.
 
 ## Installation
 
-TODO: Write installation instructions here
+Add the following to your shards.yml 
+```yml
+dependencies:
+  str_compressor:
+    github: elorest/str_compressor 
+```
+Run `shards update`
 
 ## Usage
 
-TODO: Write usage instructions here
+```cr
+require "str_compressor"
 
-## Development
+# To use gzip
+gzipped_str = Gzip.write("Hello World")
+Gzip.read(gzipped_str) # => "Hello World"
 
-TODO: Write development instructions here
+# To use flate
+flatecompressed_str = Flate.write("Hello World")
+Flate.read(flatecompressed_str) # => "Hello World"
+```
 
 ## Contributing
 
